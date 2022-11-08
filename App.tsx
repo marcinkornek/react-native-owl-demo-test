@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   ActivityIndicator,
+  Alert,
   Image,
   Pressable,
   ScrollView,
@@ -79,6 +80,18 @@ const App = () => {
           </>
         )}
       </View>
+
+      <Text
+        style={
+          styles.textInputLabel
+        }>{`Current text from state: ${text}`}</Text>
+
+      <Pressable
+        testID="Submit"
+        onPress={() => Alert.alert('text from state', text)}
+        style={styles.button}>
+        <Text style={styles.buttonText}>Log text from state</Text>
+      </Pressable>
 
       <Section title="Setup">
         Install <Text style={styles.highlight}>react-native-owl</Text> and

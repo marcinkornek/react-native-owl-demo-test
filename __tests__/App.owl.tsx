@@ -37,6 +37,7 @@ describe('App.tsx', () => {
 
   it('enters some text and takes a screenshot', async () => {
     await changeText('TextInput', 'Entered text');
+    await press('Submit');
 
     const screen = await takeScreenshot('entered-text');
 
